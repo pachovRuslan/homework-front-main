@@ -32,14 +32,14 @@ export const HW4 = () => {
 
       <Input currentText={currentText} setCurrentText={setCurrentText}/>
 
-      <Button  callBack={handleSave} name='+'/>
+      <Button  callBack={handleSave} name='Сохранить'/>
 
       <h1 style={{ marginTop: '50px' }}>СПИСОК ДЕЛ НА ДЕНЬ:</h1>
 
      <ol id={'hw04-tasks'}>
         {texts.map((el, index) => {
           return (
-           <li key={index} id={`hw04-task-${index}`} >
+           <li key={index} id={`hw04-task-${index}`} className={`${s.defaultClass} ${index % 2 === 0 ? s.chetNechet : ''}`} >
               {el}
            </li>
           );
